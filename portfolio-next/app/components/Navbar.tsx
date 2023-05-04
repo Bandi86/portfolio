@@ -8,29 +8,28 @@ import Link from 'next/link';
 
 const Navbar = () => {
 	return (
-		<nav className='h-12 bg-gradient-to-r from-purple-500 to-pink-500 lg:justify-between'>
-			<div className='max-w-screen-xl flex flex-row items-center justify-around'>
-				<div className='p-2'>András</div>
-				<div className='flex flex-row gap-4 items-center'>
-					<FaHome className='text-black opacity-50 hover:opacity-100' />
+		<nav className='h-12 w-full bg-gradient-to-r from-purple-900 to-pink-500 flex items-center justify-center'>
+			<div className='max-w-screen-xl'>
+				<div className='flex flex-row gap-5 items-center'>
+					<FaHome className='text-white' />
 					<Link href='/'>
-						<span className='opacity-50 hover:opacity-100'>Home</span>
+						<span className='hover:text-lg'>Home</span>
 					</Link>
-					<FcBusinessman className='text-black opacity-50 hover:opacity-100' />
+					<FcBusinessman className='text-white' />
 					<Link href='/about'>
-						<span className='opacity-50 hover:opacity-100'>About</span>
+						<span className='hover:text-lg'>About</span>
 					</Link>
-					<RiComputerFill className='text-black opacity-50 hover:opacity-100' />
+					<RiComputerFill className='text-white' />
 					<Link href='/projects'>
-						<span className='opacity-50 hover:opacity-100'>Projects</span>
+						<span className='hover:text-lg'>Projects</span>
 					</Link>
-					<FaBlog className='text-black opacity-50 hover:opacity-100' />
+					<FaBlog className='text-white' />
 					<Link href='/blog'>
-						<span className='opacity-50 hover:opacity-100'>Blog</span>
+						<span className='hover:text-lg'>Blog</span>
 					</Link>
-					<AiFillContacts className='text-black opacity-50 hover:opacity-100' />
+					<AiFillContacts className='text-white' />
 					<Link href='/contact'>
-						<span className='opacity-50 hover:opacity-100'>Contact</span>
+						<span className='hover:text-lg'>Contact</span>
 					</Link>
 				</div>
 			</div>

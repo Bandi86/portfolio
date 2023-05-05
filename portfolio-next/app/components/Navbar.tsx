@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const Navbar = () => {
 	return (
-		<nav className='h-12 w-full bg-gradient-to-r from-purple-900 to-pink-500 flex items-center justify-center'>
+		<div className='h-12 w-full bg-gradient-to-r from-purple-900 to-pink-500 flex items-center justify-center'>
 			<div className='max-w-screen-xl'>
 				<div className='flex flex-row gap-5 items-center'>
 					<FaHome className='text-white' />
@@ -33,7 +33,7 @@ const Navbar = () => {
 					</Link>
 				</div>
 			</div>
-		</nav>
+		</div>
 	);
 };
 

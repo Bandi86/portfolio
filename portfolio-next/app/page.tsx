@@ -8,13 +8,13 @@ export default function Home() {
 	return (
 		<>
 			<main
-				className='flex items-center justify-center min-h-screen'
+				className='flex items-center justify-center h-full'
 				style={{
 					backgroundImage: `url('/assets/bg.jpg')`,
 					backgroundSize: 'cover',
 				}}
 			>
-				<div className='container flex flex-col m-12 items-center justify-center gap-4 max-w-lg p-8 shadow-lg bg-slate-100 border rounded-md'>
+				<div className='flex flex-col m-[3rem] items-center justify-center gap-4 max-w-lg p-8 shadow-lg bg-slate-100 border rounded-md'>
 					<div className='mb-4'>
 						<Image
 							src='/assets/me.jpg'

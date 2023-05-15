@@ -10,7 +10,7 @@ export default function Home() {
 			<main
 				className="flex items-center justify-center h-full"
 				style={{
-					backgroundImage: `url(assets/bg.jpg)`,
+					backgroundImage: "url(assets/bg.jpg)",
 					backgroundSize: "cover",
 				}}
 			>

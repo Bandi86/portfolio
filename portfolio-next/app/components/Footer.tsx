@@ -1,4 +1,5 @@
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
+import Link from 'next/link';
 
 const Footer = () => {
 	return (
@@ -8,9 +9,15 @@ const Footer = () => {
 			</div>
 			<div className='flex flex-row justify-between content-center gap-10'>
 				Social Media Links:
-				<BsTwitter className='text-blue-600 text-2xl' />
-				<BsGithub className='text-black text-2xl' />
-				<BsLinkedin className='text-blue-800 text-2xl' />
+				<Link href='https://twitter.com/ardorras'>
+					<BsTwitter className='text-blue-600 text-2xl' />
+				</Link>
+				<Link href='https://github.com/Bandi86'>
+					<BsGithub className='text-black text-2xl' />
+				</Link>
+				<Link href='https://www.linkedin.com/in/andras-suslecz/'>
+					<BsLinkedin className='text-blue-800 text-2xl' />
+				</Link>
 			</div>
 		</div>
 	);

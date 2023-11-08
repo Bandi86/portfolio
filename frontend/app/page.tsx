@@ -1,7 +1,9 @@
+import FirstSection from '@/components/FirstSection';
+
 export default function Home() {
   return (
-    <>
-      <h1>Home</h1>
-    </>
+    <main className=''>
+      <FirstSection />
+    </main>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import DownloadButton from './DownloadButton'
+import NavAuth from './auth/NavAuth';
 
 const Navbar = () => {
   return (
@@ -32,7 +33,11 @@ const Navbar = () => {
           <span className='ml-4 text-gray-900 no-underline hover:text-gray-700'>Blog</span>
         </Link>
       </div>
+      <div className='flex row gap-6 items-center'>
+        <NavAuth />
       <DownloadButton />
+      </div>
+      
     </nav>
   );
 };

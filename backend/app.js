@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
+import cors from 'cors';
 import connectDB from './db/connect.js';
 import userRouter from './routes/user.js';
 import blogRouter from './routes/blog.js';
@@ -8,11 +9,17 @@ import { notFound, errorHandler } from './middleware/errorMIddleware.js';
 
 const app = express();
 
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  credentials: true,
+};
+
 dotenv.config();
 
 const port = process.env.PORT;
 
 app.use(express.json());
+app.use(cors(corsOptions));
 app.use(cookieParser());
 
 app.get('/', (req, res) => res.send('Server is ready'));

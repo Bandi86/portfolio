@@ -5,7 +5,7 @@ import generateToken from '../../utils/generateToken.js';
 export const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
-  console.log(user._id);
+ 
 
   if (user && (await user.matchPassword(password))) {
     generateToken(res, user._id);

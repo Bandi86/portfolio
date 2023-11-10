@@ -5,6 +5,8 @@ import cors from 'cors';
 import connectDB from './db/connect.js';
 import userRouter from './routes/user.js';
 import blogRouter from './routes/blog.js';
+import downloadRouter from './routes/download.js';
+import contactRouter from './routes/contact.js';
 import { notFound, errorHandler } from './middleware/errorMIddleware.js';
 
 const app = express();
@@ -27,6 +29,8 @@ app.get('/', (req, res) => res.send('Server is ready'));
 // Route Users
 app.use('/api/users', userRouter);
 app.use('/api/blog', blogRouter);
+app.use('/api/download', downloadRouter);
+app.use('/api/contact', contactRouter);
 
 // CUSTOM ERROR MIDDLEWARE
 app.use(notFound);

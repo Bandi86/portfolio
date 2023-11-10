@@ -19,8 +19,14 @@ const userSchema = mongoose.Schema(
     role: {
       type: String,
       enum: ['admin', 'user'],
-      default: 'user', // Alapértelmezett érték: "user"
+      default: 'user',
     },
+    contacts: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: ' Contact',
+      },
+    ],
   },
   {
     timestamps: true,

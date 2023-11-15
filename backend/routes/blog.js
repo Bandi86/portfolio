@@ -4,15 +4,19 @@ import { blogDetail } from '../controllers/blog/blogDetail.js';
 import { blogCreate } from '../controllers/blog/blogCreate.js';
 import { blogUpdate } from '../controllers/blog/blogUpdate.js';
 import { blogDelete } from '../controllers/blog/blogDelete.js';
+import { blogTags } from '../controllers/blog/blogTags.js';
+import { createTags } from '../controllers/blog/createTags.js';
 import { adminProtected } from '../middleware/adminMiddleware.js';
 import { protect } from '../middleware/authMiddleware.js';
 
 const router = express();
 
-router.get('/', adminProtected, protect, blogList);
-router.get('/:id', adminProtected, protect, blogDetail);
-router.post('/', adminProtected, protect, blogCreate);
-router.patch('/:id', adminProtected, protect, blogUpdate);
-router.delete('/:id', adminProtected, protect, blogDelete);
+router.get('/tags', blogTags);
+router.get('/:id', blogDetail);
+router.get('/', blogList);
+router.post('/tags', protect, adminProtected, createTags);
+router.post('/', protect, adminProtected, blogCreate);
+router.patch('/:id', protect, adminProtected, blogUpdate);
+router.delete('/:id', protect, adminProtected, blogDelete);
 
 export default router;

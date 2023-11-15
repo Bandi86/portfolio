@@ -1,6 +1,6 @@
-import jwt from "jsonwebtoken";
+import jwt from 'jsonwebtoken';
 import asyncHandler from 'express-async-handler';
-import User from "../models/User.js";
+import User from '../models/User.js';
 
 const protect = asyncHandler(async (req, res, next) => {
   let token;
@@ -9,15 +9,15 @@ const protect = asyncHandler(async (req, res, next) => {
   if (token) {
     try {
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      req.user = await User.findById(decoded.userId).select("-password");
+      req.user = await User.findById(decoded.userId);
       next();
     } catch (error) {
-      request.status(401);
-      throw new Error("Not authorized, invalid token");
+      res.status(401);
+      throw new Error('Not authorized, invalid token');
     }
   } else {
     res.status(401);
-    throw new Error("Not authorized, no token");
+    throw new Error('Not authorized, no token');
   }
 });
 

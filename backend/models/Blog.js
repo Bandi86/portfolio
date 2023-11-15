@@ -14,10 +14,11 @@ const blogSchema = mongoose.Schema({
     ref: 'User',
     required: true,
   },
-  tag: {
-    type: [String],
+  tag: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Tag',
     required: true,
-  },
+  }],
   created_at: {
     type: Date,
     default: Date.now,

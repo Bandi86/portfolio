@@ -20,9 +20,6 @@ const page = () => {
     id: user ? user._id : undefined,
   });
 
-  
-  
-
   useEffect(() => {
     if (!user) {
       setData({ ...data, name: data.name, email: data.email, text: data.text });
@@ -127,11 +124,6 @@ const page = () => {
               </div>
               <div className='p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center'>
                 <a className='text-indigo-500'>susutechno@gmail.com</a>
-                <p className='leading-normal my-5'>
-                  49 Smith St.
-                  <br />
-                  Saint Cloud, MN 56301
-                </p>
               </div>
             </div>
           </div>

@@ -15,7 +15,8 @@ export const blogCreate = asyncHandler(async (req, res) => {
 
     const existingTag = await Tag.findOne({ name: tagInputTrimmed });
 
-    if (!title || !content || existingTag) {
+
+    if (!title || !content) {
       // Ha nincs cím vagy tartalom, ne hozzon létre semmilyen entitást
       res.status(400);
       throw new Error('Invalid blog data');
@@ -40,7 +41,7 @@ export const blogCreate = asyncHandler(async (req, res) => {
         title,
         content,
         author,
-        tag: newTag._id,
+        tag: existingTag._id,
       });
 
       if (blog) {

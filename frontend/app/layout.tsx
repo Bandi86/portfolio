@@ -20,10 +20,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' className='min-h-min'>
       <body className={roboto.className}>
+        <main >
         <Navbar />
         {children}
+        </main>
+       
       </body>
     </html>
   );

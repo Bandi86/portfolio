@@ -1,4 +1,5 @@
-import webshopImg from '../../public/webshop.png'
+import webshopImg from '@/public/webshop.png'
+import weatherapp from '@/public/weatherapp.png'
 
 export const links = [
     {
@@ -36,19 +37,13 @@ export const links = [
       imageUrl: webshopImg,
     },
     {
-      title: 'rmtDev',
+      title: 'Weather App',
       description:
-        'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-      tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
-      //imageUrl: rmtdevImg,
+        'A webalkalmazás egy egyszerű időjárás előrejelző alkalmazás. A felhasználók megadhatják a város nevét, és a webalkalmazás megjeleníti az aktuális időjárást.',
+      tags: ['React', 'TypeScript', 'Next.js', 'Tailwind'],
+      imageUrl: weatherapp,
     },
-    {
-      title: 'Word Analytics',
-      description:
-        'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-      tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
-      //imageUrl: wordanalyticsImg,
-    },
+    
   ] as const;
   
   export const skillsData = [

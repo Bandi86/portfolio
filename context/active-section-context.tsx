@@ -21,7 +21,7 @@ export const ActiveSectionContext =
 const ActiveSectionContextProvider = ({
   children,
 }: ActiveSectionContextProviderProps) => {
-  const [activeSection, setActiveSection] = useState<SectionName>('Home');
+  const [activeSection, setActiveSection] = useState<SectionName>('Kezdolap');
   const [timeOfLastClick, setTimeOfLastClick] = useState<number>(0);
 
   return (
